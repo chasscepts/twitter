@@ -13,12 +13,20 @@
   </head>
 
   <body>
-    <% if notice %>
-      <p class="notice"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
-    <%= yield %>
+    <div class="container-lg">
+      <header class="row">
+        <% if notice %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert"><%= alert %></p>
+        <% end %>
+        <%=
+          # render 'navbar', user: nil
+          render 'navbar', user: Struct.new('TestModel', :name).new('Francis')
+        %>
+      </header>
+      <%= yield %>
+    </div>
   </body>
 </html>
