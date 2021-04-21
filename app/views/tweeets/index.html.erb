@@ -1,27 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Tweeets</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tweeets.each do |tweeet| %>
-      <tr>
-        <td><%= tweeet.content %></td>
-        <td><%= link_to 'Show', tweeet %></td>
-        <td><%= link_to 'Edit', edit_tweeet_path(tweeet) %></td>
-        <td><%= link_to 'Destroy', tweeet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Tweeet', new_tweeet_path %>
+<div class="row">
+  <div class="col-3">
+    <table class="table table-primary">
+      <thead>
+        <tr><th>Trends</th></tr>
+      </thead>
+      <tbody>
+        <% [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].each do |num| %>
+          <tr><td><%= "Trend #{num}" %></td></tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-6">
+    <%= render 'feed', tweeets: @tweeets %>
+  </div>
+  <div class="col-3">
+    <table class="table table-primary">
+      <thead>
+        <tr><th>Who to follow</th></tr>
+      </thead>
+      <tbody>
+        <% ['Onah Maureen', 'Obetta Netochukwu', 'Obetta Chinecherem', 'Obetta Chidimma'].each do |name| %>
+          <tr><td><%= name %></td></tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

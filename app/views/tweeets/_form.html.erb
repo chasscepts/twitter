@@ -1,5 +1,4 @@
-
-<%= simple_form_for(@tweeet) do |f| %>
+<%= simple_form_for(tweeet) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -7,7 +6,8 @@
     <%= f.input :content %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions d-flex justify-content-end pt-2">
+    <%= f.button :submit, class: 'btn-primary d-block' %>
   </div>
+  <hr>
 <% end %>

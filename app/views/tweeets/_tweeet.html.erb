@@ -1,0 +1,25 @@
+<article class="media box">
+  <div class="align-left">
+    <figure class="image is-64X64">
+      <%= image_tag 'placeholder_64X64.png'%>
+    </figure>
+  </div>
+  <div class="media-content">
+    <div class="content">
+      <strong>Obetta Francis</strong><br>
+      <small>@chass</small>
+      <p><%= tweeet.content %></p>
+      <nav class="level">
+        <%= link_to tweeet, class: 'level-item' do %>
+          <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+        <% end %>
+        <%= link_to edit_tweeet_path(tweeet), class: 'level-item' do %>
+          <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+        <% end %>
+        <%= link_to tweeet, method: :delete, data: {confirm: 'Are you sure you want to delete this tweet?'}, class: 'level-item' do %>
+          <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+        <% end %>
+      </nav>
+    </div>
+  </div>
+</article>

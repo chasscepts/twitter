@@ -1,0 +1,14 @@
+<div class="w-100">
+  <article class="media box">
+    <div class="align-left">
+      <figure class="image is-64X64">
+        <%= image_tag 'placeholder_64X64.png'%>
+      </figure>
+    </div>
+    <div class="media-content">
+      <%= render 'form', tweeet: @tweeet %>
+    </div>
+  </article>
+
+  <%= render tweeets %>
+</div>
