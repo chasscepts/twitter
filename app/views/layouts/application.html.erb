@@ -21,10 +21,7 @@
         <% if alert %>
           <p class="alert"><%= alert %></p>
         <% end %>
-        <%=
-          # render 'navbar', user: nil
-          render 'navbar', user: Struct.new('TestModel', :name).new('Francis')
-        %>
+        <%= render 'navbar', user: @current_user %>
       </header>
       <%= yield %>
     </div>

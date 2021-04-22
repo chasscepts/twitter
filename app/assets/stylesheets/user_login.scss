@@ -1,0 +1,10 @@
+@import './partials/user_common';
+
+.user-login-container {
+  @include user_container;
+}
+
+.user-login-inner {
+  max-width: 400px;
+  @include user_inner;
+}

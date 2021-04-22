@@ -1,0 +1,10 @@
+@import './partials/user_common';
+
+.user-form-container {
+  @include user_container;
+}
+
+.user-form-inner {
+  max-width: 600px;
+  @include user_inner;
+}
