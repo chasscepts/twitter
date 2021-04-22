@@ -14,16 +14,17 @@
  *= require_self
  */
 
- /* @import './form', 'user_registration';
+/* @import './form', 'user_registration';
 */
 
- body {
-   margin: 0;
- }
+body {
+  margin: 0;
+}
 
- .image {
-   border-radius: 50%;
-   img {
-     border-radius: 50%;
-   }
- }
+.image {
+  border-radius: 50%;
+
+  img {
+    border-radius: 50%;
+  }
+}

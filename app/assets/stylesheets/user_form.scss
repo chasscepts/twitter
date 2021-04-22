@@ -6,5 +6,6 @@
 
 .user-form-inner {
   max-width: 600px;
+
   @include user_inner;
 }
