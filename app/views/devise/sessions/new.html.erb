@@ -1,0 +1,25 @@
+<div class="user-login-container">
+
+  <div class="user-login-inner">
+
+    <h2 class="ps-3 text-primary">Log In</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :email, required: true, autofocus: true %>
+        <%= f.input :password, required: true %>
+        <div class="d-flex justify-content-end mt-3">
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+      </div>
+      <div class="form-actions d-flex justify-content-end mt-3">
+        <%= f.button :submit, "Sign In", class: 'btn btn-primary px-5' %>
+      </div>
+    <% end %>
+    <div class="d-flex justify-content-end me-3">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

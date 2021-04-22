@@ -1,0 +1,19 @@
+.simple_form {
+  padding: 20px;
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 7px 10px;
+    border-radius: 0;
+    background-color: #f6fbff;
+  }
+}
+
+.form-group {
+  margin-top: 15px;
+}
+
+.form-group:first-child {
+  margin-top: 0;
+}
